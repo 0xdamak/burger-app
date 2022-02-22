@@ -1,0 +1,224 @@
+.BurgerAnimated {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
+
+img {
+  width: 25rem;
+}
+
+.TopBun {
+  position: relative;
+  z-index: 8;
+  animation: TopBun 4s infinite;
+}
+
+.Salad {
+  position: relative;
+  z-index: 7;
+  margin-top: -10rem;
+  animation: Salad 4s infinite;
+}
+
+.Cheese {
+  position: relative;
+  z-index: 6;
+  margin-top: -9rem;
+  width: 23rem;
+  animation: Cheese 4s infinite;
+}
+
+.Meat {
+  position: relative;
+  z-index: 5;
+  margin-top: -7rem;
+  animation: Meat 4s infinite;
+}
+
+.Tomatoes {
+  position: relative;
+  z-index: 4;
+  margin-top: -5rem;
+  width: 20rem;
+  animation: Tomatoes 4s infinite;
+}
+
+.Onions {
+  position: relative;
+  z-index: 3;
+  margin-top: -6rem;
+  width: 22rem;
+  animation: Onions 4s infinite;
+}
+
+.BottomBun {
+  position: relative;
+  z-index: 2;
+  margin-top: -5rem;
+  animation: BottomBun 4s infinite;
+}
+
+@keyframes TopBun {
+  0% {
+    left: 0px;
+    top: 0px;
+  }
+  25% {
+    left: 0px;
+    top: -210px;
+  }
+  50% {
+    left: -120px;
+    top: -210px;
+  }
+  75% {
+    left: 0px;
+    top: -210px;
+  }
+  100% {
+    left: 0px;
+    top: 0px;
+  }
+}
+
+@keyframes Salad {
+  0% {
+    left: 0px;
+    top: 0px;
+  }
+  25% {
+    left: 0px;
+    top: -140px;
+  }
+  50% {
+    left: 120px;
+    top: -140px;
+  }
+  75% {
+    left: 0px;
+    top: -140px;
+  }
+  100% {
+    left: 0px;
+    top: 0px;
+  }
+}
+
+@keyframes Cheese {
+  0% {
+    left: 0px;
+    top: 0px;
+  }
+  25% {
+    left: 0px;
+    top: -70px;
+  }
+  50% {
+    left: -120px;
+    top: -70px;
+  }
+  75% {
+    left: 0px;
+    top: -70px;
+  }
+  100% {
+    left: 0px;
+    top: 0px;
+  }
+}
+
+@keyframes Meat {
+  0% {
+    left: 0px;
+    top: 0px;
+  }
+  25% {
+    left: 0px;
+    top: 0px;
+  }
+  50% {
+    left: 120px;
+    top: 0px;
+  }
+  75% {
+    left: 0px;
+    top: 0px;
+  }
+  100% {
+    left: 0px;
+    top: 0px;
+  }
+}
+
+@keyframes Tomatoes {
+  0% {
+    left: 0px;
+    top: 0px;
+  }
+  25% {
+    left: 0px;
+    top: 70px;
+  }
+  50% {
+    left: -120px;
+    top: 70px;
+  }
+  75% {
+    left: 0px;
+    top: 70px;
+  }
+  100% {
+    left: 0px;
+    top: 0px;
+  }
+}
+
+@keyframes Onions {
+  0% {
+    left: 0px;
+    top: 0px;
+  }
+  25% {
+    left: 0px;
+    top: 140px;
+  }
+  50% {
+    left: 120px;
+    top: 140px;
+  }
+  75% {
+    left: 0px;
+    top: 140px;
+  }
+  100% {
+    left: 0px;
+    top: 0px;
+  }
+}
+
+@keyframes BottomBun {
+  0% {
+    left: 0px;
+    top: 0px;
+  }
+  25% {
+    left: 0px;
+    top: 210px;
+  }
+  50% {
+    left: -120px;
+    top: 210px;
+  }
+  75% {
+    left: 0px;
+    top: 210px;
+  }
+  100% {
+    left: 0px;
+    top: 0px;
+  }
+}
