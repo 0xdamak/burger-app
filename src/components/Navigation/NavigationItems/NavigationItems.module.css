@@ -1,0 +1,50 @@
+.NavigationItems {
+  padding-top: 2rem;
+  list-style: none;
+}
+
+.ListItem {
+  position: relative;
+  /* animation: all 20s; */
+}
+
+.ListItem:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+
+.ListItem::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0.3rem;
+  background-color: var(--color-primary-light);
+  transform: scaleY(0);
+  transition: transform 0.2s, width 0.3s cubic-bezier(1, 0, 0, 1) 0.2s,
+    background-color 0.2s;
+}
+
+.Active {
+  background-color: var(--color-primary-light);
+}
+
+.ListItem:hover::before {
+  transform: scaleY(1);
+  width: 100%;
+}
+
+.ListItem .active {
+  /*  */
+  background-color: var(--color-primary-light);
+}
+
+.Link {
+  position: relative;
+  display: block;
+  color: var(--color-grey-light-2);
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  padding: 1rem 2rem;
+  z-index: 1;
+}
