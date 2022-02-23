@@ -1,0 +1,62 @@
+.Burger {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.Burger img {
+  width: 10rem;
+}
+
+.TopBun {
+  position: relative;
+  z-index: 8;
+  animation: TopBun 4s infinite;
+}
+
+.Salad {
+  position: relative;
+  z-index: 7;
+  /* margin-top: -8rem; */
+  animation: Salad 4s infinite;
+}
+
+.Cheese {
+  position: relative;
+  z-index: 6;
+  /* margin-top: -8rem; */
+  width: 23rem;
+  animation: Cheese 4s infinite;
+}
+
+.Meat {
+  position: relative;
+  z-index: 5;
+  /* margin-top: -6rem; */
+  animation: Meat 4s infinite;
+}
+
+.Tomato {
+  position: relative;
+  z-index: 4;
+  /* margin-top: -4rem; */
+  width: 20rem;
+  animation: Tomato 4s infinite;
+}
+
+.Onion {
+  position: relative;
+  z-index: 3;
+  /* margin-top: -5rem; */
+  width: 19rem;
+  animation: Onion 4s infinite;
+}
+
+.BottomBun {
+  position: relative;
+  z-index: 2;
+  /* margin-top: -4rem; */
+  animation: BottomBun 4s infinite;
+}
