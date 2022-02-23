@@ -1,0 +1,43 @@
+.Wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.Buttons {
+  text-align: center;
+  width: 100%;
+}
+
+.Buttons button {
+  font-size: 1.3rem;
+  border-radius: 4rem;
+  padding: 0.8rem 2rem;
+  margin-top: 2rem;
+  transition: all 0.2s;
+}
+
+.Buttons button:not(:last-child) {
+  margin-right: 2rem;
+}
+
+.Buttons button:nth-child(1) {
+  border: 1px solid var(--color-grey-dark-1);
+}
+
+.Buttons button:nth-child(1):hover {
+  background-color: var(--color-grey-dark-1);
+  color: var(--white);
+}
+
+.Buttons button:nth-child(2) {
+  background-color: var(--color-primary-light);
+  border: 1px solid var(--color-primary-light);
+  color: var(--white);
+}
+
+.Buttons button:nth-child(2):hover {
+  background-color: var(--color-primary-dark);
+}
