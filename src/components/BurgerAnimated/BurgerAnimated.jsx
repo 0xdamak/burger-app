@@ -9,8 +9,8 @@ function BurgerAnimated() {
     { type: "salad", key: "Salad", class: "Salad" },
     { type: "cheese", key: "Cheese", class: "Cheese" },
     { type: "meat", key: "Meat", class: "Meat" },
-    { type: "tomatoes", key: "Tomatoes", class: "Tomatoes" },
-    { type: "onions", key: "Onions", class: "Onions" },
+    { type: "tomato", key: "Tomato", class: "Tomato" },
+    { type: "onion", key: "Onion", class: "Onion" },
     { type: "bottom-bun", key: "Bottom Bun", class: "BottomBun" },
   ];
 
