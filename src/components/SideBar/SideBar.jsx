@@ -5,7 +5,7 @@ import Classes from "./SideBar.module.css";
 
 function SideBar() {
   return (
-    <div className={Classes.SideBar}>
+    <div className={Classes.Wrapper}>
       <Navigation />
       <div className={Classes.Footer}>
         &copy; 2022 by{" "}
