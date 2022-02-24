@@ -1,9 +1,12 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import BurgerAnimated from "../../components/BurgerAnimated/BurgerAnimated";
 
 import Classes from "./Home.module.css";
 
 function Home() {
+  const navigate = useNavigate();
+
   return (
     <div className={Classes.Home}>
       <div className={Classes.Container}>
@@ -27,8 +30,15 @@ function Home() {
             molestias exercitationem quis.
           </div>
           <div className={Classes.Buttons}>
-            <button>View Live App</button>
-            <button>View Repo</button>
+            <button onClick={() => navigate("app")}>View Live App</button>
+            <button
+              onClick={(e) => {
+                e.preventDefault();
+                window.open("http://google.com", "_blank");
+              }}
+            >
+              View Repo
+            </button>
           </div>
         </div>
       </div>
