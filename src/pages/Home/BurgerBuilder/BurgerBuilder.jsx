@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import {
   increment,
   decrement,
+  reset,
 } from "../../../store/features/burgerBuilderSlice/burgerBuilderSlice";
 import Burger from "../../../components/Burger/Burger";
 import BuildControls from "../../../components/BuildControls/BuildControls";
@@ -13,21 +14,21 @@ function BurgerBuilder() {
   const burgerIngredients = useSelector(
     (state) => state.burgerBuilder.ingredients
   );
+  const totalPrice = useSelector((state) => state.burgerBuilder.totalPrice);
+
   const dispatch = useDispatch();
 
   function add(id) {
-    if (burgerIngredients[id].amount === 5) {
+    if (burgerIngredients[id].number === 5) {
       return;
     }
-    console.log(id);
     dispatch(increment(id));
   }
 
   function remove(id) {
-    if (burgerIngredients[id].amount === 0) {
+    if (burgerIngredients[id].number === 0) {
       return;
     }
-    console.log(id);
     dispatch(decrement(id));
   }
 
@@ -37,7 +38,12 @@ function BurgerBuilder() {
         <Burger ingredients={burgerIngredients} />
       </div>
       <div className={Classes.Controls}>
-        <BuildControls add={(id) => add(id)} remove={(id) => remove(id)} />
+        <BuildControls
+          add={(id) => add(id)}
+          remove={(id) => remove(id)}
+          totalPrice={totalPrice.toFixed(2)}
+          reset={() => dispatch(reset())}
+        />
       </div>
 
       {/* BurgerBuilder <br />
