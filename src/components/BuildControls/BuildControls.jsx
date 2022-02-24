@@ -4,7 +4,7 @@ import BuildControl from "./BuildControl/BuildControl";
 
 import Classes from "./BuildControls.module.css";
 
-function BuildControls({ reset, order, add, remove, amount }) {
+function BuildControls({ reset, order, add, remove, totalPrice }) {
   const burger = useSelector((state) => state.burgerBuilder.ingredients);
 
   const buildControls = [
@@ -16,11 +16,11 @@ function BuildControls({ reset, order, add, remove, amount }) {
     { label: "Pear", id: "pear" },
   ];
 
-//   console.log(burger);
+  //   console.log(burger);
 
   return (
     <div className={Classes.Wrapper}>
-      <h3 className={Classes.Price}>Price: $10</h3>
+      <h3 className={Classes.Price}>Price: ${totalPrice}</h3>
       <div className={Classes.Controls}>
         {buildControls.map((buildControl, index) => {
           return (
@@ -29,9 +29,8 @@ function BuildControls({ reset, order, add, remove, amount }) {
               remove={() => remove(buildControl.id)}
               key={buildControl.id}
               label={buildControl.label}
-              amount={burger[buildControl.id].amount}
+              number={burger[buildControl.id].number}
             />
-            // console.log(burger[buildControl.id].amount)
           );
         })}
       </div>

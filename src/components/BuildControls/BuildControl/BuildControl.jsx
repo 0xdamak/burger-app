@@ -2,12 +2,12 @@ import React from "react";
 
 import Classes from "./BuildControl.module.css";
 
-function BuildControl({ add, remove, label, amount }) {
+function BuildControl({ add, remove, label, number }) {
   return (
     <div className={Classes.Wrapper}>
       <div className={Classes.Label}>
         <h4>
-          {label}: <strong>{amount}</strong>
+          {label}: <strong>{number}</strong>
         </h4>
       </div>
       <div className={Classes.Buttons}>
