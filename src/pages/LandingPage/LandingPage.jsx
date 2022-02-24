@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import BurgerAnimated from "../../components/BurgerAnimated/BurgerAnimated";
 
-import Classes from "./Home.module.css";
+import Classes from "./LandingPage.module.css";
 
 function Home() {
   const navigate = useNavigate();
