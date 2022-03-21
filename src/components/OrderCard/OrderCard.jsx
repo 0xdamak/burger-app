@@ -1,7 +1,6 @@
 import React from "react";
 import Logo from "../../assets/svgs/Logo";
-
-import Classes from "./OrderCard.module.css";
+import Classes from "./OrderCard.module.scss";
 
 function OrderCard() {
   return (
