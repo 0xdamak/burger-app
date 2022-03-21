@@ -4,18 +4,16 @@ import {
   increment,
   decrement,
   reset,
-} from "../../../store/features/burgerBuilderSlice/burgerBuilderSlice";
-import Burger from "../../../components/Burger/Burger";
-import BuildControls from "../../../components/BuildControls/BuildControls";
-
-import Classes from "./BurgerBuilder.module.css";
+} from "../../../store/features/burgerBuilderSlice";
+import Burger from "../../../components/Burger";
+import BuildControls from "../../../components/BuildControls";
+import Classes from "./BurgerBuilder.module.scss";
 
 function BurgerBuilder() {
   const burgerIngredients = useSelector(
     (state) => state.burgerBuilder.ingredients
   );
   const totalPrice = useSelector((state) => state.burgerBuilder.totalPrice);
-
   const dispatch = useDispatch();
 
   function add(id) {
@@ -45,11 +43,6 @@ function BurgerBuilder() {
           reset={() => dispatch(reset())}
         />
       </div>
-
-      {/* BurgerBuilder <br />
-      <button onClick={() => dispatch(increment("salad"))}>add</button>
-      <br />
-      <button onClick={() => dispatch(decrement("salad"))}>remove</button> */}
     </div>
   );
 }

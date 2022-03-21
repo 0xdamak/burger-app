@@ -1,0 +1,17 @@
+.Wrapper {
+  display: grid;
+  grid-template-columns: 2fr 1.5fr;
+  height: 100%;
+
+  .Burger {
+    display: flex;
+    margin: 2rem 0;
+    justify-content: center;
+    align-items: center;
+    overflow-y: scroll;
+  }
+
+  .Controls {
+    width: 100%;
+  }
+}
