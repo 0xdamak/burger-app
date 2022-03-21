@@ -1,9 +1,8 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import Header from "../../components/Header/Header";
-import SideBar from "../../components/SideBar/SideBar";
-
-import Classes from "./Home.module.css";
+import Header from "../../components/Header";
+import SideBar from "../../components/SideBar";
+import Classes from "./Home.module.scss";
 
 function Live() {
   return (

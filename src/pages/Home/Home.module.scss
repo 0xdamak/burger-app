@@ -1,0 +1,16 @@
+.Wrapper {
+  width: 80%;
+  height: 53rem;
+  border-radius: 1rem;
+  background-color: var(--white);
+  box-shadow: var(--shadow-dark);
+
+  .Body {
+    display: flex;
+    height: calc(100% - 4.9rem);
+  }
+
+  .Content {
+    width: 100%;
+  }
+}
