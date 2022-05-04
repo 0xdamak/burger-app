@@ -1,7 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import BurgerAnimated from "../../components/BurgerAnimated/BurgerAnimated";
-
+import { ButtonPrimary } from "../../components/UI/Button";
 import Classes from "./LandingPage.module.scss";
 
 function LandingPage() {
@@ -27,7 +26,7 @@ function LandingPage() {
           exercitationem quis.
         </div>
         <div className={Classes.Buttons}>
-          <Link to="app">View Live App</Link>
+          <ButtonPrimary href="app">View Live App</ButtonPrimary>
           <a href="http://google.com" target="_blank" rel="noreferrer">
             View Repo
           </a>
