@@ -5,55 +5,55 @@ export const burgerBuilderSlice = createSlice({
   initialState: {
     ingredients: {
       salad: {
-        id: "Salad",
-        number: 0,
-        value: 0.8,
+        id: "salad",
+        quantity: 0,
+        value: 150,
       },
       cheese: {
-        id: "Cheese",
-        number: 0,
-        value: 0.5,
+        id: "cheese",
+        quantity: 0,
+        value: 80,
       },
       meat: {
-        id: "Meat",
-        number: 0,
-        value: 1.2,
+        id: "meat",
+        quantity: 0,
+        value: 300,
       },
       tomato: {
-        id: "Tomato",
-        number: 0,
-        value: 0.2,
+        id: "tomato",
+        quantity: 0,
+        value: 50,
       },
       onion: {
-        id: "Onion",
-        number: 0,
-        value: 0.2,
+        id: "onion",
+        quantity: 0,
+        value: 50,
       },
       pear: {
-        id: "Pear",
-        number: 0,
-        value: 0.6,
+        id: "pear",
+        quantity: 0,
+        value: 100,
       },
     },
-    totalPrice: 1,
+    totalPrice: 350,
   },
   reducers: {
     increment: (state, action) => {
-      state.ingredients[action.payload].number++;
+      state.ingredients[action.payload].quantity++;
       state.totalPrice =
         state.totalPrice + state.ingredients[action.payload].value;
     },
 
     decrement: (state, action) => {
-      state.ingredients[action.payload].number--;
+      state.ingredients[action.payload].quantity--;
       state.totalPrice =
         state.totalPrice - state.ingredients[action.payload].value;
     },
     reset: (state) => {
       for (let key in state.ingredients) {
-        state.ingredients[key].number = 0;
+        state.ingredients[key].quantity = 0;
       }
-      state.totalPrice = 1;
+      state.totalPrice = 350;
     },
   },
 });

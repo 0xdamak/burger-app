@@ -1,2 +1,1 @@
-export { default } from "./burgerBuilderSlice";
-export { increment, decrement, reset } from "./burgerBuilderSlice";
+export { default, increment, decrement, reset } from "./burgerBuilderSlice";
