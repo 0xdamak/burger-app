@@ -1,8 +1,5 @@
-import React from "react";
-import Classes from "./Backdrop.module.scss";
+import Styles from "./Backdrop.module.scss";
 
-function Backdrop() {
-  return <div className={Classes.Wrapper}></div>;
+export default function Backdrop({ onClick }) {
+  return <div onClick={onClick} className={Styles.Wrapper}></div>;
 }
-
-export default Backdrop;
