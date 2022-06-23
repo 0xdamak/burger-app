@@ -3,20 +3,20 @@
   flex-direction: column;
   justify-content: space-between;
   background-color: var(--color-grey-dark-2);
-  width: 20rem;
+  width: 18rem;
   height: 100%;
   border-bottom-left-radius: 1rem;
   color: var(--color-grey-light-2);
-  /* border-top: 0.8px solid var(--color-grey-light-3); */
-}
 
-.Footer {
-  font-size: 1.1rem;
-  text-align: center;
-  margin: 2rem 1rem;
-}
+  .Footer {
+    font-size: 1.1rem;
+    text-align: center;
+    margin: 2rem 1rem;
 
-.Footer span {
-  cursor: pointer;
-  text-decoration: underline;
+    a {
+      color: var(--white);
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  }
 }

@@ -1,32 +1,27 @@
-import React from "react";
-import Navigation from "../Navigation/Navigation";
+import Navigation from "../Navigation";
+import Styles from "./SideBar.module.scss";
 
-import Classes from "./SideBar.module.css";
+export default function SideBar() {
+  const year = new Date().getFullYear();
 
-function SideBar() {
   return (
-    <div className={Classes.Wrapper}>
+    <div className={Styles.Wrapper}>
       <Navigation />
-      <div className={Classes.Footer}>
-        &copy; 2022 by{" "}
-        <span onClick={() => window.open("https://damak.dev", "_blank")}>
+      <div className={Styles.Footer}>
+        &copy; {year} by{" "}
+        <a href="https://damak.dev" target="_blank" rel="noreferrer">
           Damak
-        </span>{" "}
+        </a>
         <br />
         Original concept by{" "}
-        <span
-          onClick={() =>
-            window.open(
-              "https://www.udemy.com/course/react-the-complete-guide-incl-redux/",
-              "_blank"
-            )
-          }
+        <a
+          href="https://www.udemy.com/course/react-the-complete-guide-incl-redux/"
+          target="_blank"
+          rel="noreferrer"
         >
           Maximilian Schwarzmüller
-        </span>
+        </a>
       </div>
     </div>
   );
 }
-
-export default SideBar;
