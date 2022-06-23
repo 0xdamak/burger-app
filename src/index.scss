@@ -37,8 +37,60 @@ body {
   color: var(--color-grey-dark-1);
 }
 
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.mt-2 {
+  margin-top: 2rem;
+}
+
+.mt-3 {
+  margin-top: 3rem;
+}
+
+.mb-1 {
+  margin-bottom: 1rem;
+}
+
+.mb-2 {
+  margin-bottom: 2rem;
+}
+
+.mb-2 {
+  margin-bottom: 2rem;
+}
+
+.flex-row,
+.flex-column {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.align-center {
+  align-items: center;
+}
+
+::selection {
+  background-color: var(--color-primary-dark);
+  color: var(--white);
+}
+
 ::-webkit-scrollbar {
-  width: 0.6rem;
+  width: 0.4rem;
 }
 
 ::-webkit-scrollbar-track {
@@ -52,23 +104,4 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
   background-color: var(--color-primary-dark);
-}
-
-a,
-a:visited,
-a:hover {
-  text-decoration: none;
-}
-
-button,
-button:visited,
-button:hover {
-  border: none;
-  background: transparent;
-  cursor: pointer;
-}
-
-::selection {
-  background-color: var(--color-primary-dark);
-  color: var(--white);
 }
