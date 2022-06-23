@@ -1,0 +1,20 @@
+.Input {
+  width: 100%;
+  border: none;
+  padding: 1rem 2rem;
+  background-color: var(--color-grey-light-2);
+  border-bottom: 0.8px solid var(--color-grey-light-3);
+  margin-bottom: 3rem;
+
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+  }
+
+  &[type="number"] {
+    -moz-appearance: textfield;
+  }
+
+  &:not(:last-child) {
+  }
+}

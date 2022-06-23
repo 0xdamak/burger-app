@@ -1,0 +1,22 @@
+.Wrapper {
+  height: 100%;
+
+  .Header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 3rem;
+
+    svg {
+      cursor: pointer;
+    }
+  }
+
+  .Body {
+    display: flex;
+    margin: 1rem 3rem;
+    padding: 2rem 0;
+    border: 0.8px solid var(--color-grey-light-2);
+    height: 80%;
+  }
+}

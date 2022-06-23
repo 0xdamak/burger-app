@@ -1,0 +1,61 @@
+.Wrapper {
+  display: flex;
+  width: 90%;
+  height: 10rem;
+  /* border: 0.8px solid var(--color-grey-light-3); */
+  border-radius: 1rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  box-shadow: 0 0rem 2rem rgb(0 0 0 / 7%);
+  cursor: pointer;
+
+  .Image {
+    display: flex;
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+    width: 8rem;
+    height: 8rem;
+    border: 0.8px solid var(--color-grey-light-3);
+    border-radius: 0.5rem;
+
+    svg {
+      height: 6rem;
+      width: 6rem;
+    }
+  }
+
+  .Details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    margin-left: 1rem;
+
+    h4 {
+      font-size: 1.4rem;
+    }
+
+    span {
+      margin-left: 1rem;
+    }
+  }
+
+  .Less {
+    background-color: red;
+    height: 10rem;
+  }
+
+  .More {
+    margin-left: auto;
+    text-transform: uppercase;
+    color: var(--color-primary-dark);
+    cursor: pointer;
+
+    h5 {
+    }
+  }
+
+  &:not(:last-child) {
+  }
+}

@@ -1,0 +1,20 @@
+.Wrapper {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 45rem;
+  height: 45rem;
+  z-index: 10;
+  background-color: var(--white);
+  transform: translate(-50%, -50%);
+  border-radius: 0.4rem;
+
+  svg {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    height: 2rem;
+    width: 2rem;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,22 @@
+.Wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--color-grey-dark-2);
+  width: 18rem;
+  height: 100%;
+  border-bottom-left-radius: 1rem;
+  color: var(--color-grey-light-2);
+
+  .Footer {
+    font-size: 1.1rem;
+    text-align: center;
+    margin: 2rem 1rem;
+
+    a {
+      color: var(--white);
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  }
+}
