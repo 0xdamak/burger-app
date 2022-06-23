@@ -1,13 +1,25 @@
-import React from "react";
+import { v4 as uuidv4 } from "uuid";
+import { motion, AnimatePresence } from "framer-motion";
+import { CancelIcon } from "../../../assets/svg/icons";
 import Backdrop from "../Backdrop";
-import Classes from "./Modal.module.scss";
+import Styles from "./Modal.module.scss";
 
-function Modal({ children }) {
+function Modal({ onClick, children }) {
   return (
-    <div>
-      <Backdrop />
-      <div className={Classes.Wrapper}>{children}</div>
-    </div>
+    <AnimatePresence exitBeforeEnter>
+      <Backdrop key={uuidv4()} onClick={onClick} />
+      <motion.div
+        key={uuidv4()}
+        animate={{ opacity: 1, scale: 1 }}
+        initial={{ opacity: 1, x: "-50%", y: "-50%", scale: 0 }}
+        exit={{ scale: 0 }}
+        transition={{ duration: 0.5 }}
+        className={Styles.Wrapper}
+      >
+        <CancelIcon onClick={onClick} />
+        {children}
+      </motion.div>
+    </AnimatePresence>
   );
 }
 
