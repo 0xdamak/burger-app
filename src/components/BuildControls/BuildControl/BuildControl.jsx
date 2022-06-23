@@ -1,16 +1,14 @@
-import React from "react";
+import Styles from "./BuildControl.module.scss";
 
-import Classes from "./BuildControl.module.css";
-
-function BuildControl({ add, remove, label, number }) {
+function BuildControl({ add, remove, label, quantity, disabled }) {
   return (
-    <div className={Classes.Wrapper}>
-      <div className={Classes.Label}>
+    <div className={Styles.Wrapper}>
+      <div className={Styles.Label}>
         <h4>
-          {label}: <strong>{number}</strong>
+          {label}: <strong>{quantity}</strong>
         </h4>
       </div>
-      <div className={Classes.Buttons}>
+      <div className={Styles.Buttons}>
         <button onClick={remove}>-</button>
         <button onClick={add}>+</button>
       </div>

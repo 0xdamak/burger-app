@@ -22,11 +22,16 @@
   border-radius: 50%;
   font-size: 1.5rem;
   transition: all 0.2s;
+  cursor: pointer;
 }
 
 .Buttons button:nth-child(1) {
   border: 1px solid var(--color-grey-dark-1);
   margin-right: 1rem;
+}
+
+.Buttons button:nth-child(1):disabled {
+  /* background-color: black; */
 }
 
 .Buttons button:nth-child(1):hover {
