@@ -1,0 +1,29 @@
+.Wrapper {
+  height: 100%;
+  width: 100%;
+  padding: 5rem;
+
+  ul {
+    li {
+      text-transform: capitalize;
+
+      &:not(:last-child) {
+        margin-bottom: 0.6rem;
+      }
+
+      span {
+        display: inline-block;
+        margin-left: auto;
+      }
+    }
+  }
+
+  .Buttons {
+    margin: auto;
+    margin-bottom: 0;
+
+    .Cancel {
+      margin-right: 1rem;
+    }
+  }
+}
