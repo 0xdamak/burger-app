@@ -1,7 +1,6 @@
 import React from "react";
 import BurgerIngredient from "../BurgerIngredient/BurgerIngredient";
-
-import Classes from "./BurgerAnimated.module.css";
+import Classes from "./BurgerAnimated.module.scss";
 
 function BurgerAnimated() {
   const ingredients = [
