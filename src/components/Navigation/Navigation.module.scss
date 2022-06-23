@@ -41,10 +41,15 @@
 
 .Link {
   position: relative;
-  display: block;
+  display: flex;
   color: var(--color-grey-light-2);
   font-size: 1.3rem;
   text-transform: uppercase;
   padding: 1rem 2rem;
   z-index: 1;
+  align-items: center;
+
+  svg {
+    margin-right: 1rem;
+  }
 }
