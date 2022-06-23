@@ -1,41 +1,56 @@
 import React from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import BurgerIngredient from "../BurgerIngredient/BurgerIngredient";
-
-import Classes from "./Burger.module.css";
-import "./Burger.css";
+import Classes from "./Burger.module.scss";
 
 function Burger({ ingredients }) {
   const ingredientsArray = Object.keys(ingredients);
 
+  const classNames = {
+    salad: "Salad",
+    cheese: "Cheese",
+    meat: "Meat",
+    tomato: "Tomato",
+    onion: "Onion",
+    pear: "Pear",
+  };
+
   let _burger = ingredientsArray
     .map((ingredient) => {
-      return [...Array(ingredients[ingredient].number)].map((_, index) => {
+      return [...Array(ingredients[ingredient].quantity)].map((_, index) => {
         return (
           <BurgerIngredient
             key={ingredient + index}
             ingredientType={ingredient}
-            className={`${ingredients[ingredient].id}`}
+            className={Classes[classNames[ingredient]]}
           />
         );
       });
     })
     .flat(1);
 
-  console.log(_burger);
-
   return (
     <div className={Classes.Wrapper}>
-      <div className="Burger">
-        <BurgerIngredient ingredientType="top-bun" className="TopBun" />
-        {_burger}
-        <BurgerIngredient ingredientType="bottom-bun" className="BottomBun" />
-      </div>
-
-      {_burger.length === 0 && (
-        <div className={Classes.Text}>
-          <h4>Start Adding Ingredients</h4>
-        </div>
-      )}
+      <AnimatePresence>
+        <motion.div
+          animate={{ scale: 1 }}
+          initial={{ scale: 0 }}
+          transition={{ duration: 0.6 }}
+          className={Classes.Burger}
+        >
+          <BurgerIngredient
+            ingredientType="top-bun"
+            className={`${Classes.TopBun} ${
+              _burger.length === 0 && Classes["mb-1"]
+            }`}
+          />
+          {_burger}
+          <BurgerIngredient
+            ingredientType="bottom-bun"
+            className={Classes.BottomBun}
+          />
+        </motion.div>
+      </AnimatePresence>
     </div>
   );
 }
